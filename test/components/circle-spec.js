@@ -14,4 +14,8 @@ describe('<Circle/>', () => {
     const wrapper = shallow(<Circle/>)
     expect(wrapper).to.be.ok
   })
+  it('has a classname of circleBoard', () => {
+    const wrapper = shallow(<Circle/>)
+    expect(wrapper).to.have.className('circleBoard')
+  })
 })
