@@ -6,16 +6,16 @@ import chaiEnzyme from 'chai-enzyme'
 chai.use(chaiEnzyme())
 import {Map} from 'immutable'
 import { mount, render, shallow } from 'enzyme'
-import {Circle} from '../../src/components/Circle.jsx'
+import {BigCircle} from '../../src/components/BigCircle.jsx'
 
 
-describe('<Circle/>', () => {
+describe('<BigCircle/>', () => {
   it('renders without any props', () => {
-    const wrapper = shallow(<Circle/>)
+    const wrapper = shallow(<BigCircle/>)
     expect(wrapper).to.be.ok
   })
-  it('has a classname of circleBoard', () => {
-    const wrapper = shallow(<Circle/>)
-    expect(wrapper).to.have.className('circleBoard')
+  it('has a classname of bigcircles', () => {
+    const wrapper = shallow(<BigCircle/>)
+    expect(wrapper).to.have.className('bigcircles')
   })
 })
