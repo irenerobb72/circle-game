@@ -10,7 +10,11 @@ export class BigCircle extends Component {
   render() {
     return (
       <div className="bigcircles">
-
+        <svg height="22000" width="222000">
+          <circle r="200"></circle>
+          <circle r="200"></circle>
+          <circle r="200"></circle>
+        </svg>
       </div>
     )
   }

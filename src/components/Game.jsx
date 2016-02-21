@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import reactMixin from 'react-mixin'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { connect } from 'react-redux'
+import {BigCircleContainer} from './BigCircle'
 
 export class Game extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export class Game extends Component {
   render() {
     return (
       <div className="game">
-
+        <BigCircleContainer/>
       </div>
     )
   }
