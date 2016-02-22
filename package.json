@@ -37,6 +37,7 @@
     "enzyme": "^2.0.0",
     "jsdom": "^8.0.4",
     "mocha": "^2.4.5",
+    "ramda": "^0.19.1",
     "style-loader": "^0.13.0",
     "supertest": "^1.2.0",
     "webpack": "^1.12.13",
