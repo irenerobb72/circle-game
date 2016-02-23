@@ -21,9 +21,17 @@ function drawCircles() {
     circle5.x = 150
     circle5.y = 350
   var circle6 = new createjs.Shape()
-    circle6.graphics.beginFill('lightblue').drawCircle(0, 0, 50)
+    circle6.graphics.beginFill('red').drawCircle(0, 0, 50)
     circle6.x = 50
     circle6.y = 250
-  stage.addChild(circle1, circle2, circle3, circle4, circle5, circle6)
+  var circle7 = new createjs.Shape()
+    circle7.graphics.beginFill('green').drawCircle(0, 0, 50)
+    circle7.x = 350
+    circle7.y = 170
+  var circle8 = new createjs.Shape()
+    circle8.graphics.beginFill('lightgreen').drawCircle(0, 0, 50)
+    circle8.x = 250
+    circle8.y = 80
+  stage.addChild(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8)
   stage.update()
 }
