@@ -1,37 +1,73 @@
-function drawCircles() {
-  var stage = new createjs.Stage('demoCanvas')
-  var circle1 = new createjs.Shape()
-    circle1.graphics.beginFill('crimson').drawCircle(0, 0, 50)
-    circle1.x = 100
-    circle1.y = 100
-  var circle2 = new createjs.Shape()
-    circle2.graphics.beginFill('blue').drawCircle(0, 0, 50)
-    circle2.x = 200
-    circle2.y = 200
-  var circle3 = new createjs.Shape()
-    circle3.graphics.beginFill('pink').drawCircle(0, 0, 50)
-    circle3.x = 300
-    circle3.y = 300
-  var circle4 = new createjs.Shape()
-    circle4.graphics.beginFill('lightblue').drawCircle(0, 0, 50)
-    circle4.x = 50
-    circle4.y = 250
-  var circle5 = new createjs.Shape()
-    circle5.graphics.beginFill('orange').drawCircle(0, 0, 50)
-    circle5.x = 150
-    circle5.y = 350
-  var circle6 = new createjs.Shape()
-    circle6.graphics.beginFill('red').drawCircle(0, 0, 50)
-    circle6.x = 50
-    circle6.y = 250
-  var circle7 = new createjs.Shape()
-    circle7.graphics.beginFill('green').drawCircle(0, 0, 50)
-    circle7.x = 350
-    circle7.y = 170
-  var circle8 = new createjs.Shape()
-    circle8.graphics.beginFill('lightgreen').drawCircle(0, 0, 50)
-    circle8.x = 250
-    circle8.y = 80
-  stage.addChild(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8)
-  stage.update()
-}
+
+        var mainCanvas = document.getElementById("myCanvas");
+        var mainContext = mainCanvas.getContext('2d');
+
+        var circles = new Array();
+
+        var requestAnimationFrame = window.requestAnimationFrame ||
+                                    window.mozRequestAnimationFrame ||
+                                    window.webkitRequestAnimationFrame ||
+                                    window.msRequestAnimationFrame;
+
+
+        function Circle(radius, speed, width, xPos, yPos) {
+            this.radius = radius;
+            this.speed = speed;
+            this.width = width;
+            this.xPos = xPos;
+            this.yPos = yPos;
+            this.opacity = .05 + Math.random() * .5;
+
+            this.counter = 0;
+
+            var signHelper = Math.floor(Math.random() * 2);
+
+            if (signHelper == 1) {
+                this.sign = -1;
+            } else {
+                this.sign = 1;
+            }
+        }
+
+        Circle.prototype.update = function () {
+
+            this.counter += this.sign * this.speed;
+
+            mainContext.beginPath();
+
+            mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
+                            this.yPos + Math.sin(this.counter / 100) * this.radius,
+                            this.width,
+                            0,
+                            Math.PI * 2,
+                            false);
+
+            mainContext.closePath();
+
+            mainContext.fillStyle = 'rgba(185, 211, 238,' + this.opacity + ')';
+            mainContext.fill();
+        };
+
+        function drawCircles() {
+            for (var i = 0; i < 100; i++) {
+                var randomX = Math.round(-200 + Math.random() * 700);
+                var randomY = Math.round(-200 + Math.random() * 700);
+                var speed = .2 + Math.random() * 3;
+                var size = 5 + Math.random() * 100;
+
+                var circle = new Circle(100, speed, size, randomX, randomY);
+                circles.push(circle);
+            }
+            draw();
+        }
+        drawCircles();
+
+        function draw() {
+            mainContext.clearRect(0, 0, 500, 500);
+
+            for (var i = 0; i < circles.length; i++) {
+                var myCircle = circles[i];
+                myCircle.update();
+            }
+            requestAnimationFrame(draw);
+        }
