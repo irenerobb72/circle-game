@@ -8,6 +8,10 @@ function drawCircles() {
     circle2.graphics.beginFill('blue').drawCircle(0, 0, 50)
     circle2.x = 200
     circle2.y = 200
-  stage.addChild(circle1, circle2)
+  var circle3 = new createjs.Shape()
+    circle3.graphics.beginFill('pink').drawCircle(0, 0, 50)
+    circle3.x = 300
+    circle3.y = 300
+  stage.addChild(circle1, circle2, circle3)
   stage.update()
 }
