@@ -7,15 +7,24 @@ body {
 #myCanvas {
     border: 1px #CCC solid;
 }
-#startbutton {
-  background-color: #C71585;
-  margin-bottom: 30px;
+
+#pink {
+  background-color: #FF00FF;
+  border-radius: 5px;
   border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  text-transform: uppercase;
+}
+ #cyan {
+   background-color: #00FFFF;
+   border-radius: 5px;
+   border: none;
+ }
+#orange {
+  background-color: #FF8C00;
+  border-radius: 5px;
+  border: none;
+}
+#yellow {
+  background-color: #FFFF00;
+  border-radius: 5px;
+  border: none;
 }
