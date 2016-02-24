@@ -12,7 +12,7 @@
 <body>
   <button id="startbutton">Start Game</button>
     <div id="container">
-        <canvas id="myCanvas" width="2000" height="2000">
+        <canvas id="myCanvas" width="1000" height="500">
           <script>
                   var mainCanvas = document.getElementById("myCanvas");
                   var mainContext = mainCanvas.getContext('2d');
@@ -59,7 +59,7 @@
 
                       mainContext.closePath();
 
-                      mainContext.fillStyle = 'rgba(255, 20, 147,' + this.opacity + ')';
+                      mainContext.fillStyle = 'rgba(175, 255, 0,' + this.opacity + ')';
                       mainContext.fill();
                   };
                   function setupCircles() {
