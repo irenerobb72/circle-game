@@ -8,13 +8,14 @@ body {
     border: 1px #CCC solid;
 }
 #startbutton {
-  background-color: #FFE4E1;
+  background-color: #C71585;
   margin-bottom: 30px;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  text-transform: uppercase;
 }
