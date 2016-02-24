@@ -12,7 +12,7 @@ function Circle(radius, speed, width, xPos, yPos) {
   this.width = width;
   this.xPos = xPos;
   this.yPos = yPos;
-  this.opacity = .5 + Math.random() * .5;
+  this.opacity = 0.5 + Math.random() * 0.5;
   this.counter = 0;
 
 var signHelper = Math.floor(Math.random() * 2);
@@ -42,15 +42,16 @@ function setupCircles() {
   for (var i = 0; i < 100; i++) {
     var randomX = Math.round(-200 + Math.random() * 4000);
     var randomY = Math.round(-200 + Math.random() * 4000);
-    var speed = .2 + Math.random() * 9;
+    var speed = 0.2 + Math.random() * 9;
     var size = 5 + Math.random() * 50;
     var radius = 50 + Math.random() * 100;
     var circle = new Circle(radius, speed, size, randomX, randomY);
-      circles.push(circle);
-        }
-        drawAndUpdate();
-      }
-      setupCircles();
+    circles.push(circle);
+    }
+    drawAndUpdate();
+  }
+
+setupCircles();
 
   function drawAndUpdate() {
     mainContext.clearRect(0, 0, 1000, 1000);
