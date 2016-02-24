@@ -1,6 +1,15 @@
+import $ from 'jquery'
 var mainCanvas = document.getElementById("myCanvas");
 var mainContext = mainCanvas.getContext('2d');
 var circles = new Array();
+function buttonClick() {
+  $(() => {
+    $('#pink').on('click', function(e) {
+      var circle = $(e.target)
+      circle.css('fill', '#FF00FF')
+    })
+  })
+}
 var requestAnimationFrame = window.requestAnimationFrame ||
                             window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame ||
