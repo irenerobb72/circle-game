@@ -16,6 +16,7 @@ function Circle(radius, speed, width, xPos, yPos) {
   this.yPos = yPos;
   this.opacity = 0.5 + Math.random() * 0.5;
   this.counter = 0;
+  
 
 var signHelper = Math.floor(Math.random() * 2);
   if (signHelper == 1) {
@@ -61,4 +62,5 @@ setupCircles();
       var myCircle = circles[i];
       myCircle.update();
     }
+    setInterval(setUpCircles, 10)
 }
