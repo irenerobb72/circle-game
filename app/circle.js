@@ -2,10 +2,12 @@ var mainCanvas = document.getElementById("myCanvas");
 var mainContext = mainCanvas.getContext('2d');
 var circles = new Array();
 
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+function init() {
+  var mainCanvas = document.getElementById("myCanvas")
+  var mainContext = mainCanvas.getContext('2d')
+  setInterval(setUpCircles, 10)
+}
+
 function Circle(radius, speed, width, xPos, yPos) {
   this.radius = radius;
   this.speed = speed;
@@ -59,5 +61,4 @@ setupCircles();
       var myCircle = circles[i];
       myCircle.update();
     }
-  requestAnimationFrame(drawAndUpdate);
 }
