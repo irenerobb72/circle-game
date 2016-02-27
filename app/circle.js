@@ -24,5 +24,4 @@ function setupCircles() {
     }
     drawAndUpdate()
   }
-
 setupCircles()
