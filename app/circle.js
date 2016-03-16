@@ -9,9 +9,8 @@ function setupCircles() {
     var randomX = Math.round(-200 + Math.random() * 4000)
     var randomY = Math.round(-200 + Math.random() * 4000)
     var speed = 0.2 + Math.random() * 9
-    var size = 5 + Math.random() * 50
     var radius = 50 + Math.random() * 100
-    var circle = new Circle(radius, speed, size, randomX, randomY);
+    var circle = new setupCircles(radius, speed, randomX, randomY)
     circles.push(circle);
     mainContext.beginPath();
     mainContext.arc(this.xPos + Math.cos(this.counter / 200) * this.radius,
@@ -22,6 +21,5 @@ function setupCircles() {
                   false)
     mainContext.closePath()
     }
-    drawAndUpdate()
   }
 setupCircles()
