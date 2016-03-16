@@ -28,3 +28,10 @@ function setupCircles() {
     }
   }
 setupCircles()
+
+function drawAndUpdate() {
+  mainContext.clearRect(0, 0, 1000, 1000)
+  for (var i = 0; i < circles.length; i++)
+    var myCircle = circles[i]
+    myCircle.update()
+}
