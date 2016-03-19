@@ -3,6 +3,7 @@ function init() {
   var mainContext = mainCanvas.getContext('2d')
   var circles = new Array()
 }
+
 function setUpCircles() {
   for (var i = 0; i < 100; i++){
     var mainCanvas = document.getElementById("myCanvas")
