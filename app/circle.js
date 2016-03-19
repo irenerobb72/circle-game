@@ -10,9 +10,7 @@ function Circle(radius, speed, width, xPos, yPos) {
     this.xPos = xPos
     this.yPos = yPos
     this.opacity = .05 + Math.random() * .5
-
     this.counter = 0
-
     var signHelper = Math.floor(Math.random() * 2)
 
     if (signHelper == 1) {
@@ -24,7 +22,6 @@ function Circle(radius, speed, width, xPos, yPos) {
 
 Circle.prototype.update = function () {
     this.counter += this.sign * this.speed
-
     mainContext.beginPath()
     mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
                     this.yPos + Math.sin(this.counter / 100) * this.radius,
@@ -34,7 +31,6 @@ Circle.prototype.update = function () {
                     false)
 
     mainContext.closePath()
-
     mainContext.fillStyle = 'rgba(185, 211, 238,' + this.opacity + ')'
     mainContext.fill()
 };
@@ -46,7 +42,6 @@ function setupCircles() {
         var speed = .2 + Math.random() * 3
         var size = 5 + Math.random() * 100
         var radius = 50 + Math.random() * 100
-
         var circle = new Circle(radius, speed, size, randomX, randomY)
         circles.push(circle)
     }
@@ -56,12 +51,9 @@ setupCircles()
 
 function drawAndUpdate() {
     mainContext.clearRect(0, 0, 500, 500)
-
     for (var i = 0; i < circles.length; i++) {
-
         var myCircle = circles[i]
         myCircle.update()
     }
-
     requestAnimationFrame(drawAndUpdate)
 }
