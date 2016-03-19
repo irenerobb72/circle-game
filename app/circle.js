@@ -9,7 +9,7 @@ function Circle(radius, speed, width, xPos, yPos) {
     this.width = width
     this.xPos = xPos
     this.yPos = yPos
-    this.opacity = .05 + Math.random() * .5
+    this.opacity = 0.05 + Math.random() * 0.5
     this.counter = 0
     var signHelper = Math.floor(Math.random() * 2)
 
@@ -39,7 +39,7 @@ function setupCircles() {
     for (var i = 0; i < 100; i++) {
         var randomX = Math.round(-200 + Math.random() * 700)
         var randomY = Math.round(-200 + Math.random() * 700)
-        var speed = .2 + Math.random() * 3
+        var speed = 0.2 + Math.random() * 3
         var size = 5 + Math.random() * 100
         var radius = 50 + Math.random() * 100
         var circle = new Circle(radius, speed, size, randomX, randomY)
