@@ -1,6 +1,5 @@
 var mainCanvas = document.getElementById("myCanvas")
 var mainContext = mainCanvas.getContext('2d')
-
 var circles = []
 
 function Circle(radius, speed, width, xPos, yPos) {
@@ -31,7 +30,7 @@ Circle.prototype.update = function () {
                     false)
 
     mainContext.closePath()
-    mainContext.fillStyle = 'rgba(185, 211, 238,' + this.opacity + ')'
+    mainContext.fillStyle = 'rgba(255, 0, 255,' + this.opacity + ')'
     mainContext.fill()
 };
 
