@@ -22,11 +22,11 @@ function Circle(radius, speed, width, xPos, yPos) {
 Circle.prototype.update = function () {
     this.counter += this.sign * this.speed
     mainContext.beginPath()
-    mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
-                    this.yPos + Math.sin(this.counter / 100) * this.radius,
+    mainContext.arc(this.xPos + Math.cos(this.counter / 200) * this.radius,
+                    this.yPos + Math.sin(this.counter / 200) * this.radius,
                     this.width,
                     0,
-                    Math.PI * 2,
+                    Math.PI * 5,
                     false)
 
     mainContext.closePath()
@@ -36,8 +36,8 @@ Circle.prototype.update = function () {
 
 function setupCircles() {
     for (var i = 0; i < 100; i++) {
-        var randomX = Math.round(-200 + Math.random() * 700)
-        var randomY = Math.round(-200 + Math.random() * 700)
+        var randomX = Math.round(-300 + Math.random() * 700)
+        var randomY = Math.round(-300 + Math.random() * 700)
         var speed = 0.2 + Math.random() * 3
         var size = 5 + Math.random() * 100
         var radius = 50 + Math.random() * 100
@@ -49,7 +49,7 @@ function setupCircles() {
 setupCircles()
 
 function drawAndUpdate() {
-    mainContext.clearRect(0, 0, 500, 500)
+    mainContext.clearRect(0, 0, 1000, 6000)
     for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i]
         myCircle.update()
