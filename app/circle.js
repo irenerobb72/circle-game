@@ -54,5 +54,5 @@ function drawAndUpdate() {
         var myCircle = circles[i]
         myCircle.update()
     }
-    requestAnimationFrame(drawAndUpdate)
+  requestAnimationFrame(drawAndUpdate)
 }
