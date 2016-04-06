@@ -28,6 +28,6 @@ module.exports = {
     contentBase: './dist'
   },
   sassLoader: {
-     includePaths: [path.resolve(__dirname, "main.scss")]
+     includePaths: [path.resolve(__dirname, "./styles")]
    }
 }
