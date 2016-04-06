@@ -1,9 +1,10 @@
+
 const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   entry: [
-    './src/index.jsx'
+    './app/circle.js'
   ],
   module: {
     loaders: [{
@@ -20,12 +21,12 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    path: __dirname + '/',
+    path: __dirname + '/dist',
     publicPath: '/',
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './'
+    contentBase: './dist'
   },
   sassLoader: {
      includePaths: [path.resolve(__dirname, "./styles")]
