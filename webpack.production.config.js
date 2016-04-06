@@ -1,4 +1,3 @@
-
 const webpack = require('webpack')
 const path = require('path')
 
@@ -8,7 +7,7 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.jsx?$/,
+      test: /\.js?$/,
       exclude: /node_modules/,
       loader: 'envify-loader!babel'
     },
@@ -21,7 +20,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + './dist',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -29,6 +28,6 @@ module.exports = {
     contentBase: './dist'
   },
   sassLoader: {
-     includePaths: [path.resolve(__dirname, "./styles")]
+     includePaths: [path.resolve(__dirname, "main.scss")]
    }
 }
