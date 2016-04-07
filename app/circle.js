@@ -1,5 +1,3 @@
-
-
 var mainCanvas = document.getElementById("myCanvas")
 var mainContext = mainCanvas.getContext('2d')
 var circles = []
@@ -38,8 +36,8 @@ Circle.prototype.update = function () {
 
 function setupCircles() {
     for (var i = 0; i < 100; i++) {
-        var randomX = Math.round(-300 + Math.random() * 700)
-        var randomY = Math.round(-300 + Math.random() * 700)
+        var randomX = Math.round(-300 + Math.random() * 1000)
+        var randomY = Math.round(-300 + Math.random() * 1000)
         var speed = 0.2 + Math.random() * 3
         var size = 5 + Math.random() * 100
         var radius = 50 + Math.random() * 100

@@ -1,10 +1,10 @@
 import $ from 'jquery'
-import {Click} from 'circle.js'
+import { Click } from 'circle.js'
 
 function buttonClick() {
   $(() => {
     $('#pink').on('click', function(e) {
-      console.log('sksdfnsdfFDJF')
+      console.log(e)
       Click.fillStyle = '#FF00FF'
       })
     })
