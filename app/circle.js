@@ -1,3 +1,5 @@
+
+
 var mainCanvas = document.getElementById("myCanvas")
 var mainContext = mainCanvas.getContext('2d')
 var circles = []
@@ -56,3 +58,4 @@ function drawAndUpdate() {
     }
   requestAnimationFrame(drawAndUpdate)
 }
+require('../styles/main.scss')
