@@ -39,7 +39,7 @@ function setupCircles() {
         var randomX = Math.round(-300 + Math.random() * 1000)
         var randomY = Math.round(-300 + Math.random() * 1000)
         var speed = 0.2 + Math.random() * 3
-        var size = 5 + Math.random() * 100
+        var size = 5 + Math.random() * 80
         var radius = 50 + Math.random() * 100
         var circle = new Circle(radius, speed, size, randomX, randomY)
         circles.push(circle)

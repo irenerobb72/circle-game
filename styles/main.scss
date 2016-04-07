@@ -2,10 +2,12 @@ body {
   margin-top: 40px;
   padding: 0px;
   text-align: center;
-  background-color: white;
+  background-color: black;
 }
 #myCanvas {
   border: 1px #CCC solid;
+  cursor: crosshair;
+  background-color: white;
 }
 
 #pink {
