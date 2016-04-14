@@ -56,4 +56,12 @@ function drawAndUpdate() {
     }
   requestAnimationFrame(drawAndUpdate)
 }
+
+function changeColor() {
+  mainContext.fillStyle = "rgb(255, 0, 127)"
+}
+
+changeColor()
+  mainCanvas.onClick = changeColor()
+
 require('../styles/main.scss')
