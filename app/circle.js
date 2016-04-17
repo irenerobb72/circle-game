@@ -8,7 +8,7 @@ function Circle(radius, speed, width, xPos, yPos) {
     this.width = width
     this.xPos = xPos
     this.yPos = yPos
-    this.opacity = 0.05 + Math.random() * 0.5
+    this.opacity = 0.80 + Math.random() * 0.80
     this.counter = 0
     var signHelper = Math.floor(Math.random() * 2)
 
@@ -30,7 +30,7 @@ Circle.prototype.update = function () {
                     false)
 
     mainContext.closePath()
-    mainContext.fillStyle = 'rgba(255, 0, 255,' + this.opacity + ')'
+    mainContext.fillStyle = 'rgba(120, 234, 227,' + this.opacity + ')'
     mainContext.fill()
 };
 
